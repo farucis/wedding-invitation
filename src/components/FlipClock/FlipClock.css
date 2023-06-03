@@ -1,32 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Droid+Sans+Mono");
 
-#app {
-  display: flex;
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  justify-content: center;
-  align-items: center;
-  background-color: #fbab7e;
-  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
-}
-
-header {
-  display: flex;
-  position: relative;
-}
-header h1 {
-  font-family: "Droid Sans Mono", monospace;
-  font-weight: lighter;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: white;
-}
-
 .flipClock {
   display: flex;
-  justify-content: space-between;
-  width: 500px;
+  justify-content: center;
+  width: 90%;
 }
 
 .flipUnitContainer {
@@ -69,6 +46,8 @@ header h1 {
 }
 .upperCard span {
   transform: translateY(50%);
+  font-family: "GveretLevin", sans-serif;
+
 }
 
 .lowerCard {
@@ -79,6 +58,8 @@ header h1 {
 }
 .lowerCard span {
   transform: translateY(-50%);
+  font-family: "GveretLevin", sans-serif;
+
 }
 
 .flipCard {
@@ -93,10 +74,13 @@ header h1 {
   backface-visibility: hidden;
 }
 .flipCard span {
+  
   font-family: "Droid Sans Mono", monospace;
   font-size: 5em;
   font-weight: lighter;
   color: #333333;
+  font-family: "GveretLevin", sans-serif;
+
 }
 .flipCard.unfold {
   top: 50%;
@@ -143,6 +127,13 @@ header h1 {
   transform-style: preserve-3d;
 }
 
+.flipUnitContainer h4 {
+  text-align: center;
+  margin-top: 6px;
+  font-size: 1.8rem;
+  font-family: "GveretLevin", sans-serif;
+}
+
 @-webkit-keyframes fold {
   0% {
     transform: rotateX(0deg);
@@ -177,40 +168,61 @@ header h1 {
   }
 }
 
+@media screen and (max-width: 825px) {
+  .flipUnitContainer {
+    width: 130px;
+  }
+}
 @media screen and (max-width: 630px) {
   .flipClock {
-    justify-content: center;
-    width: 80%;
+    justify-content: space-between;
     margin-bottom: 30px;
-    padding-bottom: 50px;
+    padding: 0 30px 0 20px;
   }
   .flipUnitContainer {
-    width: 20%;
-    height: 100px;
+    width: 90px;
+    height: 90px;
   }
   .flipCard span,
   .upperCard span,
   .lowerCard span {
-    font-size: 3em;
+    font-size: 4rem;
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 500px) {
+  .flipClock {
+    padding: 0 20px 0 20px;
+  }
   .flipUnitContainer {
-    width: 23%;
+    width: 72px;
+    height: 90px;
+  }
+  .flipCard span,
+  .upperCard span,
+  .lowerCard span {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .flipClock {
+    margin: 0 40px 0 20px;
+  }
+  .flipUnitContainer {
+    width: 46px;
 
     height: 80px;
   }
   .flipCard span,
   .upperCard span,
   .lowerCard span {
-    font-size: 2.1em;
+    font-size: 2.5em;
   }
 }
 
 @media screen and (max-width: 290px) {
   .flipUnitContainer {
-    width: 22%;
+    width: 32px;
 
     height: 60px;
   }

@@ -89,26 +89,34 @@ class FlipClock extends React.Component {
 
     return (
       <div className={"flipClock"}>
-        <FlipUnitContainer
-          unit={"dayes"}
-          digit={dayes}
-          shuffle={dayesShuffle}
-        />
-        <FlipUnitContainer
-          unit={"hours"}
-          digit={hours}
-          shuffle={hoursShuffle}
-        />
-        <FlipUnitContainer
-          unit={"minutes"}
-          digit={minutes}
-          shuffle={minutesShuffle}
-        />
-        <FlipUnitContainer
-          unit={"seconds"}
-          digit={seconds}
-          shuffle={secondsShuffle}
-        />
+        <div>
+          <FlipUnitContainer
+            unit={"dayes"}
+            digit={dayes}
+            shuffle={dayesShuffle}
+          />
+        </div>
+        <div>
+          <FlipUnitContainer
+            unit={"hours"}
+            digit={hours}
+            shuffle={hoursShuffle}
+          />
+        </div>
+        <div>
+          <FlipUnitContainer
+            unit={"minutes"}
+            digit={minutes}
+            shuffle={minutesShuffle}
+          />
+        </div>
+        <div>
+          <FlipUnitContainer
+            unit={"seconds"}
+            digit={seconds}
+            shuffle={secondsShuffle}
+          />
+        </div>
       </div>
     );
   }
@@ -161,13 +169,21 @@ const FlipUnitContainer = ({ digit, shuffle, unit }) => {
   // shuffle animations
   const animation1 = shuffle ? "fold" : "unfold";
   const animation2 = !shuffle ? "fold" : "unfold";
-
+  console.log(dd['dayes']);
   return (
     <div className={"flipUnitContainer"}>
       <StaticCard position={"upperCard"} digit={currentDigit} />
       <StaticCard position={"lowerCard"} digit={previousDigit} />
       <AnimatedCard digit={digit1} animation={animation1} />
       <AnimatedCard digit={digit2} animation={animation2} />
+      <h4>{dd[unit]}</h4>
     </div>
   );
+};
+
+export const dd = {
+   dayes: "ימים" ,
+   hours: "שעות" ,
+   minutes: "דקות" ,
+   seconds: "שניות" ,
 };

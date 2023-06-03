@@ -47,7 +47,6 @@
 .upperCard span {
   transform: translateY(50%);
   font-family: "GveretLevin", sans-serif;
-
 }
 
 .lowerCard {
@@ -59,7 +58,6 @@
 .lowerCard span {
   transform: translateY(-50%);
   font-family: "GveretLevin", sans-serif;
-
 }
 
 .flipCard {
@@ -74,13 +72,11 @@
   backface-visibility: hidden;
 }
 .flipCard span {
-  
   font-family: "Droid Sans Mono", monospace;
   font-size: 5em;
   font-weight: lighter;
   color: #333333;
   font-family: "GveretLevin", sans-serif;
-
 }
 .flipCard.unfold {
   top: 50%;
@@ -188,6 +184,9 @@
   .lowerCard span {
     font-size: 4rem;
   }
+  .flipUnitContainer h4 {
+    font-size: 1.4rem;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -202,6 +201,9 @@
   .upperCard span,
   .lowerCard span {
     font-size: 3.5rem;
+  }
+  .flipUnitContainer h4 {
+    font-size: 1.2rem;
   }
 }
 @media screen and (max-width: 425px) {

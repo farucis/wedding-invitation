@@ -16,10 +16,10 @@ class FlipClock extends React.Component {
     };
   }
   componentDidMount() {
-    this.timerID = setInterval(() => this.updateTime(), 1000);
+    this.timerID = setInterval(() => this.updateTime(), 960);
   }
   updateTime() {
-    var weddingDate = new Date("10/11/2023 22:00");
+    var weddingDate = new Date("10/11/2023 19:00");
     var today = new Date().getTime();
 
     //<<!---- set time units ---->>
@@ -69,7 +69,7 @@ class FlipClock extends React.Component {
 
       this.setState({
         seconds:
-          this.state.minutes >= 0 ? Difference_In_seconds : this.state.seconds,
+        Difference_In_seconds,
         secondsShuffle,
       });
     }
@@ -169,7 +169,7 @@ const FlipUnitContainer = ({ digit, shuffle, unit }) => {
   // shuffle animations
   const animation1 = shuffle ? "fold" : "unfold";
   const animation2 = !shuffle ? "fold" : "unfold";
-  console.log(dd['dayes']);
+  console.log(dd["dayes"]);
   return (
     <div className={"flipUnitContainer"}>
       <StaticCard position={"upperCard"} digit={currentDigit} />
@@ -182,8 +182,8 @@ const FlipUnitContainer = ({ digit, shuffle, unit }) => {
 };
 
 export const dd = {
-   dayes: "ימים" ,
-   hours: "שעות" ,
-   minutes: "דקות" ,
-   seconds: "שניות" ,
+  dayes: "ימים",
+  hours: "שעות",
+  minutes: "דקות",
+  seconds: "שניות",
 };

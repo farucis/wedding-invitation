@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/wedding-invitation/static/css/main.afb3a66c.css",
+    "main.js": "/wedding-invitation/static/js/main.77981ac4.js",
+    "static/media/pexels-pixabay-269583.jpg": "/wedding-invitation/static/media/pexels-pixabay-269583.83746bc623543cdb816c.jpg",
+    "static/media/GveretLevin.otf": "/wedding-invitation/static/media/GveretLevin.ba23fce11f5a9a4584d9.otf",
+    "index.html": "/wedding-invitation/index.html",
+    "main.afb3a66c.css.map": "/wedding-invitation/static/css/main.afb3a66c.css.map",
+    "main.77981ac4.js.map": "/wedding-invitation/static/js/main.77981ac4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.afb3a66c.css",
+    "static/js/main.77981ac4.js"
+  ]
+}

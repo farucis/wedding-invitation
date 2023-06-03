@@ -5,6 +5,10 @@
   height: 100;
   width: 100%;
 }
+.container-title {
+  font-size: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 
 .center {
   display: flex;
@@ -29,13 +33,11 @@
   opacity: 0.9;
   transition: all 0.3s;
   font-size: 1.2rem;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .btn-primary:hover {
   background-color: rgb(0, 0, 0);
   border: 2px solid rgb(255, 255, 255);
   color: white;
   opacity: 1;
-
 }

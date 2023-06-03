@@ -1,0 +1,58 @@
+#InvitationInfo {
+  height: 100vh;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  position: relative;
+  z-index: -1;
+
+}
+#InvitationInfo::before {
+  content: " ";
+  display: flex;
+  position: absolute;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.4;
+  z-index: 2;
+
+}
+@import url("https://fonts.googleapis.com/css?family=Lato|Raleway|Rouge+Script");
+
+#InvitationInfo h1 {
+  font-family: "Rouge Script", sans-serif;
+  font-weight: 700;
+  margin: 20px !important;
+  font-size: 6rem;
+}
+#InvitationInfo h2 {
+  font-family: "GveretLevin", sans-serif;
+  font-weight: 400;
+  margin: 2px !important;
+  font-size: 2rem;
+}
+.divider-img {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+}
+.divider-img::before {
+  content: " ";
+  display: flex;
+  position: absolute;
+  background-image: url("../../../public//Images/pngegg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 250px;
+  margin-top: -50px;
+  left: -250px;
+  top: -40px;
+
+  color: black;
+}

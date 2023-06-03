@@ -1,26 +1,47 @@
 #MapForPeople {
-  background: rgba(250, 139, 35, 0.643);
+  background: rgba(251, 184, 124);
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-#MapForPeople h4 {
-    font-size: 2rem;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}.container-info h2{
-     text-align: center;
-     font-size: 2rem;
-     font-family: "GveretLevin", sans-serif;
-    }
+
+.container-info h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "GveretLevin", sans-serif;
+}
 .container-button {
   padding-top: 24px;
+}
+.top-img-container {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+}
+.top-img {
+  display: flex;
+  position: absolute;
+  background-image: url("../../../public//Images/ללא\ שם.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 380px;
+  height: 320px;
+  margin-top: -50px;
+  left: -190px;
+  top: -130px;
+  z-index: -1;
+  transform: rotate(-43deg);
 }
 
 @media screen and (max-width: 701px) {
   #MapForPeople iframe {
     width: 500px;
     height: 260px;
+  }
+  .container-info h2 {
+    font-size: 1.8rem;
   }
 }
 

@@ -1,14 +1,15 @@
 import React from "react";
 import "./MapForPeople.css";
-
 const MapForPeople = () => {
   return (
     <div id="MapForPeople" class="center">
-      <h4>מקום</h4>
+      <div className="top-img-container">
+        <div className="top-img" />
+      </div>
+      <h4 className="container-title">מקום</h4>
       <div className="container-info">
         <h2> החתונה תתקיים באולמי נרניה</h2>
-        <h2>  המנוף 3, באר שבע, ישראל</h2>
-
+        <h2> המנוף 3, באר שבע, ישראל</h2>
       </div>
       <div className="">
         <iframe

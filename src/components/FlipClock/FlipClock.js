@@ -169,7 +169,6 @@ const FlipUnitContainer = ({ digit, shuffle, unit }) => {
   // shuffle animations
   const animation1 = shuffle ? "fold" : "unfold";
   const animation2 = !shuffle ? "fold" : "unfold";
-  console.log(dd["dayes"]);
   return (
     <div className={"flipUnitContainer"}>
       <StaticCard position={"upperCard"} digit={currentDigit} />

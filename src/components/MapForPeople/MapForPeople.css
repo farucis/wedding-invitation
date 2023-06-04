@@ -3,16 +3,21 @@
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: space-around;
 }
-
+#MapForPeople h4 {
+  color: rgb(60, 60, 60);
+}
+.container-info {
+  padding-bottom: 30px;
+}
 .container-info h2 {
   text-align: center;
   font-size: 2rem;
   font-family: "GveretLevin", sans-serif;
+  margin: 10px !important;
 }
 .container-button {
-  padding-top: 24px;
+  padding-top: 60px;
 }
 .top-img-container {
   display: flex;

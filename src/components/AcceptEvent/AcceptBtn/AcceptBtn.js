@@ -165,6 +165,7 @@ const AcceptBtn = (props) => {
       </div>
 
       <form className="form">
+        <h1>?כמה תהיו</h1>
         <input
           className="input"
           type="text"

@@ -5,9 +5,9 @@ import AcceptBtn from "./AcceptBtn/AcceptBtn";
 const AcceptEvent = () => {
   return (
     <div id="AcceptEvent" className="center">
-      <div className="title">אישור הגעה</div>
+      <div className="container-title" data-aos="fade-up">אישור הגעה</div>
 
-      <div className="buttons-container">
+      <div className="buttons-container" >
         {buttonsDB.map((button, index) => {
           return <AcceptBtn button={button} key={index} index={index} />;
         })}

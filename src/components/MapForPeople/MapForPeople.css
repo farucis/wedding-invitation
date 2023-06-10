@@ -3,7 +3,10 @@
   height: 100vh;
   display: flex;
   align-items: center;
+  z-index: -1;
 }
+
+
 #MapForPeople h4 {
   color: rgb(60, 60, 60);
 }

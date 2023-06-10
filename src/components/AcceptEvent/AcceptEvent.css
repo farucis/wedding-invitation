@@ -1,7 +1,20 @@
 #AcceptEvent {
   height: 100vh;
+  z-index: -2;
 }
-
+#AcceptEvent::before {
+  content: " ";
+  display: flex;
+  position: absolute;
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.4;
+  z-index: -1;
+}
 .buttons-container {
   display: grid;
   grid-auto-flow: column;
@@ -9,6 +22,10 @@
   width: 40%;
 }
 
+#AcceptEvent .container-title {
+  font-weight: 600;
+  padding-top: 40px;
+}
 @media screen and (max-width: 910px) {
   .buttons-container {
     width: 60%;

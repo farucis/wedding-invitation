@@ -1,96 +1,22 @@
 #AcceptEvent {
   height: 100vh;
-  background-color: #71dfbe;
 }
 
-.buttons {
-  display: flex;
-  width: 380px;
-  gap: 10px;
-  --b: 5px; /* the border thickness */
-  --h: 1.8em; /* the height */
-}
-
-.buttons button {
-  --_c: #88c100;
-  flex: calc(1.25 + var(--_s, 0));
-  min-width: 0;
-  font-size: 40px;
-  font-weight: bold;
-  height: var(--h);
-  cursor: pointer;
-  color: var(--_c);
-  border: var(--b) solid var(--_c);
-  background: conic-gradient(
-      at calc(100% - 1.3 * var(--b)) 0,
-      var(--_c) 209deg,
-      #0000 211deg
-    )
-    border-box;
-  clip-path: polygon(0 0, 100% 0, calc(100% - 0.577 * var(--h)) 100%, 0 100%);
-  padding: 0 calc(0.288 * var(--h)) 0 0;
-  margin: 0 calc(-0.288 * var(--h)) 0 0;
-  box-sizing: border-box;
-  transition: flex 0.4s;
-}
-.buttons button + button {
-  --_c: #ff003c;
-  flex: calc(0.75 + var(--_s, 0));
-  background: conic-gradient(
-      from -90deg at calc(1.3 * var(--b)) 100%,
-      var(--_c) 119deg,
-      #0000 121deg
-    )
-    border-box;
-  clip-path: polygon(calc(0.577 * var(--h)) 0, 100% 0, 100% 100%, 0 100%);
-  margin: 0 0 0 calc(-0.288 * var(--h));
-  padding: 0 0 0 calc(0.288 * var(--h));
-}
-.buttons button:focus-visible {
-  outline-offset: calc(-2 * var(--b));
-  outline: calc(var(--b) / 2) solid #000;
-  background: none;
-  clip-path: none;
-  margin: 0;
-  padding: 0;
-}
-.buttons button:focus-visible + button {
-  background: none;
-  clip-path: none;
-  margin: 0;
-  padding: 0;
-}
-Ï .buttons button:has(+ button:focus-visible) {
-  background: none;
-  clip-path: none;
-  margin: 0;
-  padding: 0;
-}
-.buttons button:hover,
-button:active:not(:focus-visible) {
-  --_s: 0.75;
-}
-.buttons button:active {
-  box-shadow: inset 0 0 0 100vmax var(--_c);
-  color: #fff;
-}
-
-.buttons button:active {
-  box-shadow: inset 0 0 0 100vmax var(--_c);
-  color: #fff;
+.buttons-container {
+  display: grid;
+  grid-auto-flow: column;
+  height: 80%;
+  width: 40%;
 }
 
 .accept-button-container {
-  background: #096694;
-  height: 80%;
-  width: 60%;
   position: relative;
 }
 
 .accept-button {
   background: #2b2d2f;
   height: 80px;
-  width: 200px;
+  width: 80px;
   text-align: center;
   position: absolute;
   top: 50%;
@@ -98,8 +24,9 @@ button:active:not(:focus-visible) {
   left: 0;
   right: 0;
   margin: 0 auto;
+  border-radius: 80px;
   cursor: pointer;
-  border-radius: 4px;
+  z-index: 1;
 }
 
 .text {
@@ -121,7 +48,8 @@ button:active:not(:focus-visible) {
   left: 50%;
   border-radius: 200px;
   transform: translateY(-50%) translateX(-50%);
-  background-color: #5a5a5a;
+  background-color: #b8b8b8;
+  z-index: 1;
 }
 
 svg {
@@ -139,4 +67,22 @@ svg {
   stroke-width: 3;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+@media screen and (max-width: 910px) {
+  .buttons-container {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .buttons-container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .buttons-container {
+    width: 96%;
+  }
 }

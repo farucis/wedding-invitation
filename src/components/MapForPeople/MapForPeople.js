@@ -2,7 +2,7 @@ import React from "react";
 import "./MapForPeople.css";
 const MapForPeople = () => {
   return (
-    <div id="MapForPeople" class="center">
+    <div id="MapForPeople" className="center">
       <div className="top-img-container">
         <div className="top-img" />
       </div>
@@ -20,17 +20,17 @@ const MapForPeople = () => {
           width="700"
           height="300"
           style={{ border: 0 }}
-          allowfullscreen=""
+          allowFullScreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-      <div class="container-button" data-aos="fade-up">
+      <div className="container-button" data-aos="fade-up">
         <a
           href="https://www.google.com/maps/dir//%D7%90%D7%95%D7%9C%D7%9E%D7%99+%D7%A0%D7%A8%D7%A0%D7%99%D7%94+%D7%94%D7%9E%D7%A0%D7%95%D7%A3+3+%D7%91%D7%90%D7%A8+%D7%A9%D7%91%D7%A2%E2%80%AD%E2%80%AD/@31.2275,34.8116667,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1502662ef2ae16bb:0x9f79d9521fd6aa26!2m2!1d34.8117581!2d31.2278325?entry=ttu"
-          class="button btn-primary"
+          className="button btn-primary"
         >
-          <i class="button-text"></i>
+          <i className="button-text"></i>
           &nbsp;&nbsp;נצא לדרך
         </a>
       </div>

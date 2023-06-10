@@ -1,7 +1,6 @@
 import React from "react";
 import "./AcceptEvent.css";
-import $ from "jquery";
-import anime from "animejs/lib/anime.es.js";
+import AcceptBtn from "./AcceptBtn/AcceptBtn";
 
 const AcceptEvent = () => {
   return (
@@ -31,86 +30,3 @@ const buttonsDB = [
     viewBox: "0 0 20 20",
   },
 ];
-
-const AcceptBtn = (props) => {
-  $(document).ready(() => {
-    var basicTimeline = anime.timeline({
-      autoplay: false,
-    });
-
-    var pathEls = $(".check");
-    for (var i = 0; i < pathEls.length; i++) {
-      var pathEl = pathEls[i];
-      var offset = anime.setDashoffset(pathEl);
-      pathEl.setAttribute("stroke-dashoffset", offset);
-    }
-
-    $(".accept-button").click((e) => {
-      let selecedBtnId = e.target.parentNode.id
-        ? e.target.parentNode.id
-        : e.target.parentNode.parentNode.id;
-
-        selecedBtnId[3] == 0 ? $("#btn1").remove() : $("#btn0").remove();
-
-      basicTimeline
-        .add({
-          targets: ".text",
-          duration: 1,
-          opacity: "0",
-        })
-        .add({
-          targets: ".accept-button",
-          duration: 1300,
-          height: 10,
-          width: 200,
-          backgroundColor: "#2B2D2F",
-          border: "0",
-          borderRadius: 100,
-          zIndex: "0",
-        })
-        .add({
-          targets: ".progress-bar",
-          duration: 1500,
-          width: 200,
-          easing: "linear",
-        })
-        .add({
-          targets: ".accept-button",
-          width: 0,
-          duration: 1,
-        })
-        .add({
-          targets: ".progress-bar",
-          width: 80,
-          height: 80,
-          delay: 400,
-          duration: 750,
-          borderRadius: 80,
-          backgroundColor: selecedBtnId[3] == 0 ? "#71DFBE" : "#F44336",
-          zIndex: "0",
-        })
-        .add({
-          targets: pathEls[selecedBtnId[3]],
-          strokeDashoffset: [offset, 0],
-          duration: 300,
-          easing: "easeInOutSine",
-        });
-
-      basicTimeline.play();
-    });
-  });
-
-  return (
-    <div className="accept-button-container" id={`btn${props.index}`}>
-      <div className="accept-button">
-        <div className="text">{props.button.name}</div>
-      </div>
-
-      <div className="progress-bar"></div>
-
-      <svg viewBox={props.button.viewBox}>
-        <path className="check" d={props.button.path} />
-      </svg>
-    </div>
-  );
-};

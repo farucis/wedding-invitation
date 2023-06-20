@@ -1,6 +1,6 @@
 import React from "react";
-import FlipClock from "../FlipClock/FlipClock";
 import "./AboutUs.css";
+import FlipClock from "./FlipClock/FlipClock";
 
 const AboutUs = () => {
   return (

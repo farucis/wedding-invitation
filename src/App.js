@@ -11,7 +11,7 @@ import InvitationInfo from "./components/InvitationInfo/InvitationInfo";
 import MapForPeople from "./components/MapForPeople/MapForPeople";
 import AcceptEvent from "./components/AcceptEvent/AcceptEvent";
 
-function App() {
+function App(props) {
   const [ip, setIP] = React.useState("");
 
   //creating function to load ip address from the API
@@ -33,7 +33,7 @@ function App() {
       <AcceptEvent />
       <BackToTopButton />
       <h2>Your IP Address is</h2>
-      <h4>{ip}</h4>
+      <h4>{props.ip ? props.ip : ip}</h4>
     </div>
   );
 }

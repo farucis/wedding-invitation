@@ -1,6 +1,4 @@
 #InvitationInfo {
-  height: 100vh;
-  width: 100%;
   background-color: #ffffff;
   display: flex;
   position: relative;
@@ -15,7 +13,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   opacity: 0.4;
   z-index: 2;
 }
@@ -37,6 +35,11 @@
   display: flex;
   flex-direction: row-reverse;
   position: relative;
+  width: 500px;
+  height: 250px;
+  margin-top: -30px;
+  top: -80px;
+  justify-content: center;
 }
 .divider-img::before {
   content: " ";
@@ -48,9 +51,6 @@
   background-repeat: no-repeat;
   width: 500px;
   height: 250px;
-  margin-top: -50px;
-  left: -250px;
-  top: -40px;
 
   color: black;
 }
@@ -62,12 +62,11 @@
   #InvitationInfo h2 {
     font-size: 1.5rem;
   }
+  .divider-img {
+    width: 80%;
+  }
   .divider-img::before {
-    width: 400px;
-    height: 200px;
-    left: -200px;
-    top: -20px;
-
+    width: 80%;
   }
 }
 
@@ -78,25 +77,17 @@
   #InvitationInfo h2 {
     font-size: 1.2rem;
   }
-  .divider-img::before {
-    width: 300px;
-    height: 150px;
-    left: -150px;
+  .divider-img {
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 330px) {
-    #InvitationInfo h1 {
-      font-size: 2.7rem;
-    }
-    #InvitationInfo h2 {
-      font-size: 0.9rem;
-    }
-    .divider-img::before {
-      width: 250px;
-      height: 140px;
-      left: -130px;
-      top: -20px;
-
-    }
+  #InvitationInfo h1 {
+    font-size: 2.7rem;
   }
+  #InvitationInfo h2 {
+    font-size: 0.9rem;
+  }
+
+}

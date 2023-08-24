@@ -13,7 +13,7 @@ const InvitationInfo = () => {
       <h1 data-aos="zoom-in" data-aos-duration="700" data-aos-delay="400">
         Faruch & Mapal
       </h1>
-      <h2 data-aos="zoom-in-right">שיערך ביום רביעי, כ"ז תשרי ה'תשפ"ד </h2>
+      <h2 data-aos="zoom-in-right">שיערך ביום רביעי, כ"ו תשרי ה'תשפ"ד </h2>
       <h1 data-aos="fade-up" data-aos-duration="1000">
         11.10.2023
       </h1>

@@ -1,7 +1,8 @@
 {
   "name": "wedding-website",
+  "homepage": "http://farucis.github.io/wedding-invitation",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@leenguyen/react-flip-clock-countdown": "^1.4.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -18,7 +19,6 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "http://farucis.github.io/wedding-invitation",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -43,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-router-dom": "^6.15.0"
   }
 }
